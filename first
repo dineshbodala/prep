@@ -11,3 +11,13 @@ def binary_search(x,n):
         else:
             r=mid
     return -1
+
+def selection_sort():
+	for i in range(len(x)-1):
+		min=i
+		for j in range(i,len(x)):
+			if x[j]<x[min]:
+				x[min]=x[j]
+		x[min],x[i]=x[i],x[min]
+	return x
+
