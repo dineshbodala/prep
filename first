@@ -1,6 +1,6 @@
 def binary_search(x,n):
     l=0
-    u=len(x)-1
+    r=len(x)-1
     while l<r:
         mid=int((l+r)/2)
         if x[mid]==n:
@@ -9,5 +9,5 @@ def binary_search(x,n):
         elif x[mid]<n:
             l=mid
         else:
-            u=mid
+            r=mid
     return -1
