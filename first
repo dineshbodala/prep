@@ -2,7 +2,7 @@ def binary_search(x,n):
     l=0
     u=len(x)-1
     while l<r:
-        mid=int((l+u)/2)
+        mid=int((l+r)/2)
         if x[mid]==n:
             return mid
             break
