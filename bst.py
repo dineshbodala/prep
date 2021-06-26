@@ -47,4 +47,5 @@ for i in x:
     root.insert(i)
 
 root.search(200)
+root.search(2)
 
