@@ -1,15 +1,15 @@
 def binary_search(x,n):
     l=0
-    r=len(x)-1
+    r=len(x)
     while l<r:
         mid=int((l+r)/2)
         if x[mid]==n:
             return mid
             break
         elif x[mid]<n:
-            l=mid
+            l=mid+1
         else:
-            r=mid
+            r=mid-1
     return -1
 
 def selection_sort():
@@ -22,4 +22,6 @@ def selection_sort():
 	return x
 	
 	#comment
-
+x=[1,2,3,4,5]
+n=5
+print(binary_search(x,n))
