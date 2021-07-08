@@ -43,10 +43,21 @@ class linkedlist:
                 break
             n=n.ref
 
+    def reverse(self):
+        prev=None
+        current=self.head
+        while current is not None:
+            ref=current.ref
+            current.ref=prev
+            prev=current
+            current=ref
+        self.head=prev
+
 
 ll1=linkedlist()
 ll1.add_begin(10)
 ll1.add_end(20)
 ll1.add_at_index(30,2)
-ll1.print_data()
 
+ll1.reverse()
+ll1.print_data()
