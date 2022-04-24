@@ -42,16 +42,19 @@ class linkedlist:
                 n.ref=new_node
                 break
             n=n.ref
-
-    def reverse(self):
+    
+    def reverse_data(self):
         prev=None
         current=self.head
-        while current is not None:
-            ref=current.ref
+        while current:
+            x=current.ref
             current.ref=prev
             prev=current
-            current=ref
+            current=x
         self.head=prev
+
+
+        
 
 
 ll1=linkedlist()
@@ -59,5 +62,5 @@ ll1.add_begin(10)
 ll1.add_end(20)
 ll1.add_at_index(30,2)
 
-ll1.reverse()
+ll1.reverse_data()
 ll1.print_data()
